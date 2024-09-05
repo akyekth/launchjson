@@ -1,0 +1,29 @@
+# robotframework launch.json file.
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Robot Framework: Launch template",
+            "type": "robotframework-lsp",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "target": "${workspaceFolder}/tests/regenx_access_mgmt.robot",  // Update this to the path of your test folder
+            "args": [
+                "--variable","xx:yy",
+                "--outputdir", "${workspaceFolder}/output", // Output directory for results
+                "-i", "access"
+            ],
+            "env": {
+                // Add any environment variables you need here
+                "xxxx":"xxxx"
+            },
+            "robot.pythonpath": [
+                "${workspaceFolder}/venv/Scripts/ptyhon.exe",
+                "${workspaceFolder}/src"  // Update this if you have a specific Python path
+            ],
+            "robot.env": {
+                "FUNCIDPASSWORD":"3AgCUiS9pqI!2AX1AhtvWiS9pqI!2AX1A"
+            }
+        }
+    ]
+}
